@@ -1,0 +1,10 @@
+# Ignore everything by default
+/*
+
+# ...except the things we actually want to track
+!/.gitignore
+!/README.md
+!/agents/
+!/agents/**
+!/skills/
+!/skills/**
