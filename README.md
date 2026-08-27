@@ -6,7 +6,7 @@ This repo (my `~/.copilot` config) contains custom Copilot agents and skills.
 
 | Agent | Description |
 |---|---|
-| **beamer** | Thin Codex-style wrapper that routes Beamer slide requests to the canonical `beamer` skill (creation, compilation, review, TikZ diagrams, etc.). |
+| **beamer** (not mine! lost track of the original source) | Thin Codex-style wrapper that routes Beamer slide requests to the canonical `beamer` skill (creation, compilation, review, TikZ diagrams, etc.). |
 | **canvas-page-editor** | Revises/creates Canvas course pages for CSE 534 — content updates, accessibility checks, link fixing, code embeds, merging local/Canvas content. |
 | **educational-reviewer** | Reviews educational content (slides, markdown, HTML) for clarity and accessibility to new learners — jargon, pedagogical flow, assumptions. |
 | **slide-reviewer** | AI slide linter for Beamer decks — checks layout, whitespace, columns vs. stacking, image sizing, and deck-wide consistency using LaTeX source + rendered images. |
