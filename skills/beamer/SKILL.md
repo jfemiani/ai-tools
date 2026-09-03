@@ -119,6 +119,45 @@ When creating new slides, use this as the default preamble unless the user has a
     - Always use `[T]` (top-align) unless deliberately centering.
     - Columns content follows the same density constraints as regular slides.
 
+### 1.1 Fidelity-First Reconstruction Rules (Student-Facing Decks)
+
+Normative language: **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT** are normative.
+
+1. **Source fidelity**
+  - MUST preserve original instructional intent, text scope, and sequence.
+  - MUST NOT replace source explanation with newly invented summary text unless explicitly requested.
+  - SHOULD keep slide-level pacing aligned with the source deck.
+
+2. **Title and metadata hygiene**
+  - MUST keep student-facing titles course-accurate and lecture-accurate.
+  - MUST NOT include process-leak text (conversion notes, extraction notes, pipeline notes, internal build commentary) on student-facing slides.
+  - SHOULD keep title/subtitle typography balanced and non-dominating.
+
+3. **Visual hierarchy and readability**
+  - MUST maintain clear hierarchy: headings, body text, figures, and code all readable at lecture distance.
+  - MUST NOT allow code blocks to dominate slides whose objective is conceptual explanation.
+  - SHOULD rebalance with multi-slide progression instead of shrinking body text below readability.
+
+4. **Figure hygiene**
+  - MUST verify figure assets are figure-only when a figure-only panel is intended.
+  - MUST NOT use assets that embed duplicate slide text when that text is already typeset in the slide.
+  - SHOULD prefer clean crops and high-clarity variants.
+
+5. **Conversion quality gate**
+  - MUST treat compile success as necessary but not sufficient.
+  - MUST perform visual QA on key slides after edits (title slide, dense concept slides, code+figure slides).
+  - SHOULD resolve high-impact layout regressions before publishing.
+
+6. **Change discipline**
+  - MUST apply targeted, minimal edits for user-reported defects.
+  - MUST NOT perform broad redesign during a bug-fix request.
+  - SHOULD preserve style and structure unless redesign is explicitly requested.
+
+7. **Acceptance criteria for "fixed"**
+  - MUST satisfy all explicitly reported defects on named slides.
+  - MUST provide post-fix visual evidence for those slides.
+  - SHOULD report remaining risks or tradeoffs clearly.
+
 ---
 
 ## 2. ACTIONS

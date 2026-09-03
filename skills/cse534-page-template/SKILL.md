@@ -509,6 +509,43 @@ python3 ~/.copilot/skills/cse534-page-template/upload_to_canvas.py \
 
 **Note:** The script is in the skill directory (not student-visible). Never commit it to student-facing repos.
 
+## Configuring Quiz Attempts and Scoring Policy
+
+The skill now includes `configure_quiz_attempts.py` to set quiz retry policy on existing Canvas quizzes, including:
+- allow multiple attempts (`allowed_attempts`)
+- keep highest score across attempts (`scoring_policy=keep_highest`)
+
+Default policy for course operations: use unlimited attempts (`--attempts -1`) and keep highest score unless explicitly told otherwise.
+
+**Usage (dry run):**
+```bash
+python3 ~/.copilot/skills/cse534-page-template/configure_quiz_attempts.py \
+  --attempts -1 \
+  --title-contains "Lecture"
+```
+
+**Apply to matching quizzes:**
+```bash
+python3 ~/.copilot/skills/cse534-page-template/configure_quiz_attempts.py \
+  --attempts -1 \
+  --title-contains "Lecture" \
+  --apply
+```
+
+**Apply to all quizzes in a course:**
+```bash
+python3 ~/.copilot/skills/cse534-page-template/configure_quiz_attempts.py \
+  --attempts -1 \
+  --all \
+  --apply
+```
+
+**Options:**
+- `--attempts N`: positive integer, or `-1` for unlimited attempts
+- `--scoring-policy keep_highest|keep_latest` (default: `keep_highest`)
+- selectors: `--title`, `--title-contains`, or `--all`
+- runs in preview mode unless `--apply` is passed
+
 ## Notes for Content Creators
 
 1. **Write for students seeing the topic for the first time** - Don't assume background knowledge

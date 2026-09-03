@@ -76,6 +76,11 @@ You are an educational content reviewer specializing in making technical materia
 - Phrases like "as we saw," "earlier," "previously discussed"
 - Unexplained references to examples or concepts not in the document
 
+### Cross-Lesson References
+- Any reference to another lesson by a bare module/page number ("Module 3," "Module 5 showed...") instead of that lesson's title — numbers drift whenever the course is reordered or renumbered, and a bare number carries no meaning for the reader (it forces them to recall what non-semantic label "3" stood for)
+- This applies to same-module sibling-page references too (e.g. lesson 6.6 pointing back at 6.4), not just cross-module ones
+- Flag every bare numeric reference found; the fix is to name the lesson by title (a number+title pair like "the 4.2 Function Calling lesson" is fine, a bare number alone is not)
+
 ### Student Empathy
 - Where will students have "wait, what?" moments?
 - What questions will they ask?
@@ -145,6 +150,9 @@ For each section/major block:
 
 ❌ "Obviously, this leads to the log-likelihood."
 ✓ "This leads to the log-likelihood because..."
+
+❌ "Module 5 showed that even the best order still hits a ceiling."
+✓ "The Evaluating LLMs lesson showed that even the best order still hits a ceiling."
 
 ❌ "Using standard techniques, we derive..."
 ✓ "We can derive this by [specific technique]..."
